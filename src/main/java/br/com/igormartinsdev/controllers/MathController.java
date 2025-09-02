@@ -19,6 +19,15 @@ public class MathController {
 
     }
 
+    @RequestMapping("/subtract/{numberOne}/{numberTwo}")
+    public Double subtract(@PathVariable("numberOne") String numberOne, @PathVariable("numberTwo") String numberTwo) throws Exception {
+
+        if(!isNumeric(numberOne) || !isNumeric(numberTwo))
+            throw new UnsupportedMathOperationException("Please set a numeric value!");
+
+        return convertToDouble(numberOne) - convertToDouble(numberTwo);
+    }
+
     private boolean isNumeric(String strNumber){
         if(strNumber == null || strNumber.isEmpty())
             return false;
