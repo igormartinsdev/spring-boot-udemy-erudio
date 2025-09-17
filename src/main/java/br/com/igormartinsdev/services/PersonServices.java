@@ -19,6 +19,7 @@ public class PersonServices {
 
         for (int i = 0; i < 8; i++) {
             Person person = mockPerson(i);
+            persons.add(person);
         }
         
         return persons;
@@ -28,10 +29,23 @@ public class PersonServices {
         logger.info("Finding one Person!");
 
         Person person = new Person();
+
         person.setId(counter.incrementAndGet());
         person.setFisrtName("Igor");
         person.setLastName("Martins");
         person.setAddress("Belém - Pará - Brasil");
+        person.setGender("Male");
+
+        return person;
+    }
+
+    private Person mockPerson(int i) {
+        Person person = new Person();
+
+        person.setId(counter.incrementAndGet());
+        person.setFisrtName("firstName " + i);
+        person.setLastName("lastName" + i);
+        person.setAddress("Some Address in Brasil");
         person.setGender("Male");
 
         return person;
