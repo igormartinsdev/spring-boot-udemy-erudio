@@ -48,6 +48,8 @@ public class PersonServices {
     }
 
     public Person update(String id, Person person){
+        logger.info("Updating one person!");
+
         return person;
     }
 
