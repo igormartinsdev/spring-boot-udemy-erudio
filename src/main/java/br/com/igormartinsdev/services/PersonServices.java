@@ -47,7 +47,7 @@ public class PersonServices {
         return person;
     }
 
-    public Person update(String id, Person person){
+    public Person update(Person person){
         logger.info("Updating one person!");
 
         return person;

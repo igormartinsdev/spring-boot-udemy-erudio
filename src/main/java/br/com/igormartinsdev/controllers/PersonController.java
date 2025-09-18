@@ -33,8 +33,8 @@ public class PersonController {
     }
 
     @RequestMapping(method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public Person update(@PathVariable("id") String id, @RequestBody Person person){
-        return service.update(id, person);
+    public Person update(@RequestBody Person person){
+        return service.update(person);
     }
 
 }
