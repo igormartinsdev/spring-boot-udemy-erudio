@@ -15,5 +15,5 @@ spring:
     open-in-view: false
 logging:
   level:
-    root: WARN
-    #br.com.igormartinsdev: DEBUG
+    #root: WARN
+    br.com.igormartinsdev: DEBUG
